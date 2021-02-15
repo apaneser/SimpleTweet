@@ -43,10 +43,10 @@ public class TimelineActivity extends AppCompatActivity {
         rvTweets.setLayoutManager(new LinearLayoutManager(this));
         rvTweets.setAdapter(adapter);
 
-        popuilateHomeTimeline();
+        populateHomeTimeline();
     }
 
-    private void popuilateHomeTimeline() {
+    private void populateHomeTimeline() {
         client.getHomeTimeline(new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Headers headers, JSON json) {
